@@ -35,7 +35,6 @@ class PortalTypeManager {
         //　辞書タイプからモデルに変換する
         for item in array! {
             let portalType: PortalType = PortalType.objectWithKeyValue(keyValue: (item as NSDictionary)) as! PortalType
-            
             portalTypes.append(portalType)
         }
         
