@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B6FD0431E566F1C00BE2998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0421E566F1C00BE2998 /* AppDelegate.swift */; };
+		4B6FD0451E566F1C00BE2998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0441E566F1C00BE2998 /* ViewController.swift */; };
+		4B6FD0481E566F1C00BE2998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0461E566F1C00BE2998 /* Main.storyboard */; };
+		4B6FD04A1E566F1C00BE2998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0491E566F1C00BE2998 /* Assets.xcassets */; };
+		4B6FD04D1E566F1C00BE2998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD04B1E566F1C00BE2998 /* LaunchScreen.storyboard */; };
+		4B6FD0581E5677BD00BE2998 /* PortalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0571E5677BD00BE2998 /* PortalType.swift */; };
+		4B6FD05A1E567F7400BE2998 /* PortalType.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0591E567F7400BE2998 /* PortalType.json */; };
+		4B6FD05C1E56840C00BE2998 /* PortalTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD05B1E56840C00BE2998 /* PortalTypeButton.swift */; };
+		4B6FD05E1E5687CE00BE2998 /* PortalTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD05D1E5687CE00BE2998 /* PortalTypeButton.xib */; };
+		4B6FD0601E56CFAA00BE2998 /* PortalTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */; };
+		4B6FD0621E56D9D300BE2998 /* PortalTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */; };
+		4B6FD0641E56EC4F00BE2998 /* PortalTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B6FD03F1E566F1B00BE2998 /* MineFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6FD0421E566F1C00BE2998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B6FD0441E566F1C00BE2998 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B6FD0471E566F1C00BE2998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B6FD0491E566F1C00BE2998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B6FD04C1E566F1C00BE2998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B6FD04E1E566F1C00BE2998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6FD0571E5677BD00BE2998 /* PortalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalType.swift; sourceTree = "<group>"; };
+		4B6FD0591E567F7400BE2998 /* PortalType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PortalType.json; sourceTree = "<group>"; };
+		4B6FD05B1E56840C00BE2998 /* PortalTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeButton.swift; sourceTree = "<group>"; };
+		4B6FD05D1E5687CE00BE2998 /* PortalTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalTypeButton.xib; sourceTree = "<group>"; };
+		4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeView.swift; sourceTree = "<group>"; };
+		4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalTypeView.xib; sourceTree = "<group>"; };
+		4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B6FD03C1E566F1B00BE2998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B6FD0361E566F1B00BE2998 = {
+			isa = PBXGroup;
+			children = (
+				4B6FD0411E566F1B00BE2998 /* MineFocus */,
+				4B6FD0401E566F1B00BE2998 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B6FD0401E566F1B00BE2998 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B6FD03F1E566F1B00BE2998 /* MineFocus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B6FD0411E566F1B00BE2998 /* MineFocus */ = {
+			isa = PBXGroup;
+			children = (
+				4B6FD0541E56776F00BE2998 /* PortalType */,
+				4B6FD0421E566F1C00BE2998 /* AppDelegate.swift */,
+				4B6FD0441E566F1C00BE2998 /* ViewController.swift */,
+				4B6FD0461E566F1C00BE2998 /* Main.storyboard */,
+				4B6FD0491E566F1C00BE2998 /* Assets.xcassets */,
+				4B6FD04B1E566F1C00BE2998 /* LaunchScreen.storyboard */,
+				4B6FD04E1E566F1C00BE2998 /* Info.plist */,
+			);
+			path = MineFocus;
+			sourceTree = "<group>";
+		};
+		4B6FD0541E56776F00BE2998 /* PortalType */ = {
+			isa = PBXGroup;
+			children = (
+				4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */,
+				4B6FD0591E567F7400BE2998 /* PortalType.json */,
+				4B6FD0551E56776F00BE2998 /* Model */,
+				4B6FD0561E56776F00BE2998 /* View */,
+			);
+			path = PortalType;
+			sourceTree = "<group>";
+		};
+		4B6FD0551E56776F00BE2998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B6FD0571E5677BD00BE2998 /* PortalType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B6FD0561E56776F00BE2998 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B6FD05B1E56840C00BE2998 /* PortalTypeButton.swift */,
+				4B6FD05D1E5687CE00BE2998 /* PortalTypeButton.xib */,
+				4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */,
+				4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B6FD03E1E566F1B00BE2998 /* MineFocus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B6FD0511E566F1C00BE2998 /* Build configuration list for PBXNativeTarget "MineFocus" */;
+			buildPhases = (
+				4B6FD03B1E566F1B00BE2998 /* Sources */,
+				4B6FD03C1E566F1B00BE2998 /* Frameworks */,
+				4B6FD03D1E566F1B00BE2998 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MineFocus;
+			productName = MineFocus;
+			productReference = 4B6FD03F1E566F1B00BE2998 /* MineFocus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B6FD0371E566F1B00BE2998 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = pactera;
+				TargetAttributes = {
+					4B6FD03E1E566F1B00BE2998 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 74AH833X9M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4B6FD03A1E566F1B00BE2998 /* Build configuration list for PBXProject "MineFocus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B6FD0361E566F1B00BE2998;
+			productRefGroup = 4B6FD0401E566F1B00BE2998 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B6FD03E1E566F1B00BE2998 /* MineFocus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B6FD03D1E566F1B00BE2998 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6FD04D1E566F1C00BE2998 /* LaunchScreen.storyboard in Resources */,
+				4B6FD04A1E566F1C00BE2998 /* Assets.xcassets in Resources */,
+				4B6FD0481E566F1C00BE2998 /* Main.storyboard in Resources */,
+				4B6FD05A1E567F7400BE2998 /* PortalType.json in Resources */,
+				4B6FD0621E56D9D300BE2998 /* PortalTypeView.xib in Resources */,
+				4B6FD05E1E5687CE00BE2998 /* PortalTypeButton.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B6FD03B1E566F1B00BE2998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6FD0451E566F1C00BE2998 /* ViewController.swift in Sources */,
+				4B6FD0641E56EC4F00BE2998 /* PortalTypeManager.swift in Sources */,
+				4B6FD0601E56CFAA00BE2998 /* PortalTypeView.swift in Sources */,
+				4B6FD05C1E56840C00BE2998 /* PortalTypeButton.swift in Sources */,
+				4B6FD0581E5677BD00BE2998 /* PortalType.swift in Sources */,
+				4B6FD0431E566F1C00BE2998 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B6FD0461E566F1C00BE2998 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B6FD0471E566F1C00BE2998 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B6FD04B1E566F1C00BE2998 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B6FD04C1E566F1C00BE2998 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B6FD04F1E566F1C00BE2998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B6FD0501E566F1C00BE2998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B6FD0521E566F1C00BE2998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 74AH833X9M;
+				INFOPLIST_FILE = MineFocus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pactera.xiaohui.MineFocus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4B6FD0531E566F1C00BE2998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 74AH833X9M;
+				INFOPLIST_FILE = MineFocus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pactera.xiaohui.MineFocus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B6FD03A1E566F1B00BE2998 /* Build configuration list for PBXProject "MineFocus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6FD04F1E566F1C00BE2998 /* Debug */,
+				4B6FD0501E566F1C00BE2998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B6FD0511E566F1C00BE2998 /* Build configuration list for PBXNativeTarget "MineFocus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6FD0521E566F1C00BE2998 /* Debug */,
+				4B6FD0531E566F1C00BE2998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B6FD0371E566F1B00BE2998 /* Project object */;
+}
