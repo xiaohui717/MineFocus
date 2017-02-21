@@ -25,6 +25,9 @@ class PortalTypeButton: UIControl {
     /// ボタンのリンク
     var link: String?
     
+    /// レマーク
+    var remark: String?
+    
     /// クラスの関数
     ///
     /// - Parameter portalType: ポータルのタイプ
@@ -55,6 +58,9 @@ class PortalTypeButton: UIControl {
         
         //　ボタンのサブタイトル
         btn.buttonSubTitle.text = portalType.subTitle
+        
+        // レマーク
+        btn.remark = portalType.remark
 
         return btn
     }
