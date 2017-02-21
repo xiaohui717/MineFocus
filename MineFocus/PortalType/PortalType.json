@@ -1,11 +1,62 @@
 [
  {
-    "size" : "200, 50",
+    "size" : "180,80",
     "background" : "0F4D85",
-    "imageURL" : "http://minefoucs.com/portal_type_button_image1.png",
+    "imageURL" : "portal_type_button_image3",
     "link" : "http://minefoucs.com/portal",
-    "sort" : "1",
+    "sort" : "0",
     "title" : "ホームページ",
-    "subTitle" : "Home Page"
+    "subTitle" : "Home Page",
+    "remark" : "ホームページ Remark"
+ },
+ {
+    "size" : "180,80",
+    "background" : "E74539",
+    "imageURL" : "portal_type_button_image2",
+    "link" : "http://minefoucs.com/new_account",
+    "sort" : "1",
+    "title" : "口座開設",
+    "subTitle" : "New Account",
+    "remark" : "口座開設 Remark"
+ },
+ {
+    "size" : "180,80",
+    "background" : "F9C332",
+    "imageURL" : "portal_type_button_image4",
+    "link" : "http://minefoucs.com/internet",
+    "sort" : "2",
+    "title" : "インターネット　バンキング",
+    "subTitle" : "Internet Banking",
+    "remark" : "インターネット　バンキング Remark"
+ },
+ {
+    "size" : "180,80",
+    "background" : "ED642F",
+    "imageURL" : "portal_type_button_image1",
+    "link" : "http://minefoucs.com/various_services",
+    "sort" : "3",
+    "title" : "各種サービスのお申し込み",
+    "subTitle" : "Various Services",
+    "remark" : "各種サービスのお申し込み Remark"
+ },
+ {
+    "size" : "180,80",
+    "background" : "3D5A94",
+    "imageURL" : "portal_type_button_image5",
+    "link" : "http://minefoucs.com/contact",
+    "sort" : "4",
+    "title" : "電話によるお問い合わせ",
+    "subTitle" : "Contact",
+    "remark" : "電話によるお問い合わせ Remark"
+ },
+ {
+    "size" : "180,80",
+    "background" : "1264B2",
+    "imageURL" : "portal_type_button_image6",
+    "link" : "http://minefoucs.com/campaign",
+    "sort" : "5",
+    "title" : "キャンペーン",
+    "subTitle" : "Campaign",
+    "remark" : "キャンペーン Remark"
  }
 ]

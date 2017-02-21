@@ -10,7 +10,9 @@ import UIKit
 
 /// ボータルタイプのモデル
 class PortalType: NSObject {
-
+    
+    private let test: String = ""
+    
     /// ボタンサイズ
     var buttonSize: CGSize = CGSize(width: 200, height: 100)
     var size: String? {
@@ -51,10 +53,11 @@ class PortalType: NSObject {
                 return
             }
             
-            let url = URL(fileURLWithPath: imageURL)
-            let data = try? Data(contentsOf: url)
+//            let url = URL(fileURLWithPath: imageURL)
+//            let data = try? Data(contentsOf: url)
+//            image = UIImage(data: data ?? Data())
             
-            image = UIImage(data: data ?? Data())
+            image = UIImage(named: imageURL)
         }
     }
     
@@ -79,6 +82,8 @@ class PortalType: NSObject {
     ///　サブタイトル
     var subTitle: String?
     
+    /// レマーク
+    var remark: String?
     
     /// setup color with rgb
     ///
@@ -109,6 +114,12 @@ class PortalType: NSObject {
         
         return self.colorWithRGB(red: red, green: green, blue: blue)
     }
+    
+    /// model description for Testing
+    override var description: String {
+        return String(format: "size:%@, background:%@, imageURL: %@, link:%@, sort:%@,title:%@, subTitle:%@, remark:%@", size ?? "", background ?? "", imageURL ?? "", link ?? "", sort ?? "", title, subTitle ?? "", remark ?? "")
+    }
+    
 }
 
 // MARK: - String+Extension

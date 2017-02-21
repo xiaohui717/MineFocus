@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B366B151E5A8DCA0061E7D4 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B366B141E5A8DCA0061E7D4 /* NSObject+Extensions.swift */; };
 		4B6FD0431E566F1C00BE2998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0421E566F1C00BE2998 /* AppDelegate.swift */; };
 		4B6FD0451E566F1C00BE2998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0441E566F1C00BE2998 /* ViewController.swift */; };
 		4B6FD0481E566F1C00BE2998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0461E566F1C00BE2998 /* Main.storyboard */; };
@@ -19,9 +20,11 @@
 		4B6FD0601E56CFAA00BE2998 /* PortalTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */; };
 		4B6FD0621E56D9D300BE2998 /* PortalTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */; };
 		4B6FD0641E56EC4F00BE2998 /* PortalTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */; };
+		4BF5515D1E5BD6C600576924 /* PacteraPickerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5515B1E5BD6C600576924 /* PacteraPickerTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B366B141E5A8DCA0061E7D4 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extensions.swift"; path = "../NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		4B6FD03F1E566F1B00BE2998 /* MineFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6FD0421E566F1C00BE2998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6FD0441E566F1C00BE2998 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeView.swift; sourceTree = "<group>"; };
 		4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalTypeView.xib; sourceTree = "<group>"; };
 		4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeManager.swift; sourceTree = "<group>"; };
+		4BF5515B1E5BD6C600576924 /* PacteraPickerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacteraPickerTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B366B131E5A8DC00061E7D4 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				4BF551591E5BD6C600576924 /* KeyboardTool */,
+				4B366B141E5A8DCA0061E7D4 /* NSObject+Extensions.swift */,
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
 		4B6FD0361E566F1B00BE2998 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +81,7 @@
 		4B6FD0411E566F1B00BE2998 /* MineFocus */ = {
 			isa = PBXGroup;
 			children = (
+				4B366B131E5A8DC00061E7D4 /* Temp */,
 				4B6FD0541E56776F00BE2998 /* PortalType */,
 				4B6FD0421E566F1C00BE2998 /* AppDelegate.swift */,
 				4B6FD0441E566F1C00BE2998 /* ViewController.swift */,
@@ -107,6 +121,14 @@
 				4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4BF551591E5BD6C600576924 /* KeyboardTool */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5515B1E5BD6C600576924 /* PacteraPickerTool.swift */,
+			);
+			path = KeyboardTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6FD0451E566F1C00BE2998 /* ViewController.swift in Sources */,
+				4BF5515D1E5BD6C600576924 /* PacteraPickerTool.swift in Sources */,
 				4B6FD0641E56EC4F00BE2998 /* PortalTypeManager.swift in Sources */,
+				4B366B151E5A8DCA0061E7D4 /* NSObject+Extensions.swift in Sources */,
 				4B6FD0601E56CFAA00BE2998 /* PortalTypeView.swift in Sources */,
 				4B6FD05C1E56840C00BE2998 /* PortalTypeButton.swift in Sources */,
 				4B6FD0581E5677BD00BE2998 /* PortalType.swift in Sources */,
