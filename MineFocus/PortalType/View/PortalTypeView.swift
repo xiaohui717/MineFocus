@@ -116,8 +116,8 @@ class PortalTypeView: UIView {
                 maxBtnWidth = btn.frame.width
             }
             // モニター関数の追加
-            if let btnAction = btn.link {
-                btn.addTarget(self, action: Selector(btnAction), for: [])
+            if btn.link != nil {
+                btn.addTarget(self, action: #selector(btnAction), for: [])
             }
             
             // ボタンViewに追加する
@@ -133,6 +133,13 @@ class PortalTypeView: UIView {
         // ボタンのソート
         portalTypeButtons.sort(by: { $0.sortTag < $1.sortTag })
         
+    }
+    
+    /// ボタンのアクション
+    ///
+    /// - Parameter btn: ポータルタイプのボタン
+    func btnAction(btn: PortalTypeButton)  {
+        // btn action link = btn.link
     }
     
     /// ボタンのレイアウトの設置
