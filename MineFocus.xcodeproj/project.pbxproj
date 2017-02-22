@@ -18,7 +18,6 @@
 		4B6FD05C1E56840C00BE2998 /* PortalTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD05B1E56840C00BE2998 /* PortalTypeButton.swift */; };
 		4B6FD05E1E5687CE00BE2998 /* PortalTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD05D1E5687CE00BE2998 /* PortalTypeButton.xib */; };
 		4B6FD0601E56CFAA00BE2998 /* PortalTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */; };
-		4B6FD0621E56D9D300BE2998 /* PortalTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */; };
 		4B6FD0641E56EC4F00BE2998 /* PortalTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */; };
 		4BF5515D1E5BD6C600576924 /* PacteraPickerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5515B1E5BD6C600576924 /* PacteraPickerTool.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 		4B6FD05B1E56840C00BE2998 /* PortalTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeButton.swift; sourceTree = "<group>"; };
 		4B6FD05D1E5687CE00BE2998 /* PortalTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalTypeButton.xib; sourceTree = "<group>"; };
 		4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeView.swift; sourceTree = "<group>"; };
-		4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalTypeView.xib; sourceTree = "<group>"; };
 		4B6FD0631E56EC4F00BE2998 /* PortalTypeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalTypeManager.swift; sourceTree = "<group>"; };
 		4BF5515B1E5BD6C600576924 /* PacteraPickerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacteraPickerTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +116,6 @@
 				4B6FD05B1E56840C00BE2998 /* PortalTypeButton.swift */,
 				4B6FD05D1E5687CE00BE2998 /* PortalTypeButton.xib */,
 				4B6FD05F1E56CFAA00BE2998 /* PortalTypeView.swift */,
-				4B6FD0611E56D9D300BE2998 /* PortalTypeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,7 +192,6 @@
 				4B6FD04A1E566F1C00BE2998 /* Assets.xcassets in Resources */,
 				4B6FD0481E566F1C00BE2998 /* Main.storyboard in Resources */,
 				4B6FD05A1E567F7400BE2998 /* PortalType.json in Resources */,
-				4B6FD0621E56D9D300BE2998 /* PortalTypeView.xib in Resources */,
 				4B6FD05E1E5687CE00BE2998 /* PortalTypeButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

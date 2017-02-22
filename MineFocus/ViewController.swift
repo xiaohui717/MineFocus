@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     var selectedValue: String?
     var selectedPickerViewTag: Int = 1
     
+    var portalView: PortalTypeView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // ポータルタイプの設置
-        let portalView = PortalTypeView.portalTypeView(layoutType: PortalTypeButtonLayoutType.TwoColumnWithoutMerge)
-//        portalView.backgroundColor = UIColor.lightGray
-        portalView.frame = CGRect(origin: CGPoint(x: 0, y: 200), size: portalView.frame.size)
+        portalView = PortalTypeView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 300), layoutType: PortalTypeButtonLayoutType.TwoColumnWithoutMerge)
         
         view.addSubview(portalView)
         
@@ -100,6 +100,20 @@ extension ViewController: KeyboardToolDelegate{
         case KeyboardToolButtonType.KeyboardToolButtonDone:
             if selectedPickerViewTag == 1 {
                 selectedValue = layoutArray[(layoutPicker?.selectedRow(inComponent: 0))!]
+                
+                if selectedValue == "TwoColumnWithoutMerge" {
+                    portalView.removeFromSuperview()
+                    
+                    portalView = PortalTypeView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 300), layoutType: PortalTypeButtonLayoutType.TwoColumnWithoutMerge)
+                    
+
+                }else if selectedValue == "TwoColumnWithFristMerge" {
+                    portalView.removeFromSuperview()
+                    
+                    portalView = PortalTypeView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 300), layoutType: PortalTypeButtonLayoutType.TwoColumnWithFristMerge)
+                }
+                
+                view.addSubview(portalView)
             }else{
                 selectedValue = buttonSizeArray[(layoutPicker?.selectedRow(inComponent: 0))!]
             }

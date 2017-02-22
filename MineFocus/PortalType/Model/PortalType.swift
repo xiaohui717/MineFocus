@@ -14,7 +14,7 @@ class PortalType: NSObject {
     private let test: String = ""
     
     /// ボタンサイズ
-    var buttonSize: CGSize = CGSize(width: 200, height: 100)
+    var buttonSize: CGSize = CGSize(width: 180, height: 80)
     var size: String? {
         didSet {
             guard let size = size else {
@@ -32,6 +32,9 @@ class PortalType: NSObject {
             }
         }
     }
+    
+    /// 背景写真
+    var backgroundImage: String?
     
     ///　背景色
     var backColor: UIColor? = UIColor.blue

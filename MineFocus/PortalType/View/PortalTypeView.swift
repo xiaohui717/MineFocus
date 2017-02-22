@@ -45,25 +45,61 @@ class PortalTypeView: UIView {
     /// MAXボタンの横
     var maxBtnWidth: CGFloat = 0
     
-    /// クラスの関数
+    // ボタンX
+    var x: CGFloat = 0
+    
+    // ボタンY
+    var y: CGFloat = 0
+    
+    //　列数
+    var col: CGFloat = 0
+    
+    /// ビューの初期化
     ///
-    /// - Returns: PortalTypeView のインスタンス
-    class func portalTypeView(layoutType: PortalTypeButtonLayoutType) -> PortalTypeView {
+    /// - Parameters:
+    ///   - frame: ヴューのフレーム
+    ///   - layoutType: ボタンのレイアウト
+    init(frame: CGRect, layoutType: PortalTypeButtonLayoutType) {
         
-        //　インスタンス化
-        let nib = UINib(nibName: "PortalTypeView", bundle: nil)
-        let portalTypeView = nib.instantiate(withOwner: nil, options: nil)[0] as! PortalTypeView
+        //　スーパーのオーバーレイド
+        super.init(frame: frame)
         
-        portalTypeView.layoutType = layoutType
+        // ボタンレイアウトの設置
+        self.layoutType = layoutType
         
-        // ポータルタイプボタンの設置
-        portalTypeView.setupUI()
+        // ニューの設置
+        setupUI()
+    }
+    
+    
+    /// 初期化のオーバーレイド
+    ///
+    /// - Parameter frame: ヴューのフレーム
+    override init(frame: CGRect){
         
-        return portalTypeView
+        //　スーパーのオーバーレイド
+        super.init(frame: frame)
+        
+        // ニューの設置
+        setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    /// レサイズサーバビューのオーバーレイド
+    override func layoutSubviews() {
+        
+        //　ボタンのレイアウト
+        setupButtons()
     }
     
     /// ニューの設置
     func setupUI() {
+        
+        // オートレサイズビューの設置
+        self.autoresizesSubviews = false
         
         // 背景色の設置
         backgroundColor = UIColor.clear
@@ -97,11 +133,9 @@ class PortalTypeView: UIView {
         // ボタンのソート
         portalTypeButtons.sort(by: { $0.sortTag < $1.sortTag })
         
-        // ボタンViewに追加する
-        setupButtons()
     }
     
-    /// ボタンの追加
+    /// ボタンのレイアウトの設置
     func setupButtons()  {
         //　ボタンがない場合
         if portalTypeButtons.count == 0 {
@@ -110,44 +144,61 @@ class PortalTypeView: UIView {
         
         // ポータルタイプボタンのレイアウト
         for btn in portalTypeButtons {
-            setupButton(btn: btn)
+            
+            switch layoutType {
+            case PortalTypeButtonLayoutType.TwoColumnWithoutMerge:
+                
+                // TwoColumnWithoutMergeのレイアウト
+                setupButtonWithoutMerge(btn: btn)
+                break
+            case PortalTypeButtonLayoutType.TwoColumnWithFristMerge:
+                
+                // TwoColumnWithFristMergeのレイアウト
+                setupButtonWithFirstMerge(btn: btn)
+                break
+            }
         }
     }
     
-    /// ポータルタイプボタンの設置
+    /// ポータルタイプボタンの設置(TwoColumnWithoutMerge)
     ///
     /// - Parameter btn: ポータルタイプのボタン
-    func setupButton(btn: PortalTypeButton) {
+    func setupButtonWithoutMerge(btn: PortalTypeButton) {
         
         //　列数
-        let col = CGFloat(btn.sortTag % columnCount)
+        col = CGFloat(btn.sortTag % columnCount)
         
-//        // マージンXの設置
-//        if btn.sortTag == 0 {
-//            if portalTypeButtons.count > 2 {
-//                if (portalTypeButtons[1] as PortalTypeButton).frame.width > btn.frame.width {
-//                    marginX = (self.frame.width - (portalTypeButtons[1] as PortalTypeButton).frame.width * 2) / 3
-//                }else{
-//                    marginX = (self.frame.width - btn.frame.width * 2) / 3
-//                }
-//            }else{
-//                marginX = 20
-//            }
-//        }
-//        
-        if layoutType == PortalTypeButtonLayoutType.TwoColumnWithoutMerge {
-            
-            // ボタンX/Yの設定
-            let x = (col + 1) * marginX + (col) * maxBtnWidth
-            let y = btn.sortTag < columnCount ? marginToTop : lastBtnY + lastBtnHeight + marginToTop
-            
-            // ボタンのOriginの設定
-            let btnOrigin = CGPoint(x: x, y: y)
-            btn.frame.origin = btnOrigin
-            
-        }else if layoutType == PortalTypeButtonLayoutType.TwoColumnWithFristMerge{
-            
+        // ボタンをレイアウト
+        layoutButton(btn: btn)
+    }
+    
+    /// ポータルタイプボタンの設置(TwoColumnWithFristMerge)
+    ///
+    /// - Parameter btn: ポータルタイプのボタン
+    func setupButtonWithFirstMerge(btn: PortalTypeButton) {
+        
+        //　列数
+        if btn.sortTag == 0 || btn.sortTag == 1 {
+            col = CGFloat(btn.sortTag % columnCount)
+        }else{
+            col = CGFloat((btn.sortTag + 1) % columnCount)
         }
+        
+        // ボタンをレイアウト
+        layoutButton(btn: btn)
+    }
+    
+    /// ボタンをレイアウト
+    ///
+    /// - Parameter btn: ポータルタイプのボタン
+    func layoutButton(btn: PortalTypeButton) {
+        // ボタンX/Yの設定
+        x = (col + 1) * marginX + (col) * maxBtnWidth
+        y = btn.sortTag < columnCount ? marginToTop : lastBtnY + lastBtnHeight + marginToTop
+        
+        // ボタンのOriginの設定
+        let btnOrigin = CGPoint(x: x, y: y)
+        btn.frame.origin = btnOrigin
         
         // ビューの高
         if btn.sortTag == portalTypeButtons.count - 1 {
@@ -162,6 +213,7 @@ class PortalTypeView: UIView {
                 lastBtnHeight = btn.frame.height
             }
             lastBtnY = btn.frame.origin.y
+            lastRowFristBtnHeight = 0
         }else{
             lastRowFristBtnHeight = btn.frame.height
         }
