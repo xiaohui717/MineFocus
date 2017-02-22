@@ -117,7 +117,7 @@ class PortalTypeView: UIView {
             }
             // モニター関数の追加
             if btn.link != nil {
-                btn.addTarget(self, action: #selector(btnAction), for: [])
+                btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
             }
             
             // ボタンViewに追加する
