@@ -9,9 +9,39 @@
 import UIKit
 
 /// ボータルタイプのモデル
-class PortalType: NSObject {
+class PortalType {
     
-    private let test: String = ""
+    /// ボータルタイプの初期化
+    func setValues(dict: Dictionary<String, String>) {
+        
+        // ボタンサイズ
+        size = dict["size"] ?? ""
+        
+        // 背景写真
+        backgroundImage = dict["backgroundImage"] ?? ""
+        
+        //　背景色
+        background = dict["background"] ?? ""
+        
+        //　ボタンの写真
+        imageURL = dict["imageURL"] ?? ""
+        
+        //　ボタンのリンク
+        link = dict["link"] ?? ""
+        
+        //　ボタンのソート
+        sort = dict["sort"] ?? ""
+        
+        //　タイトル
+        title = dict["title"] ?? ""
+        
+        //　サブタイトル
+        subTitle = dict["subTitle"] ?? ""
+        
+        // レマーク
+        remark = dict["remark"] ?? ""
+        
+    }
     
     /// ボタンサイズ
     var buttonSize: CGSize = CGSize(width: 180, height: 80)
@@ -21,7 +51,7 @@ class PortalType: NSObject {
                 return
             }
             
-            let sizeArray = (size as NSString).components(separatedBy: ",")
+            let sizeArray = size.components(separatedBy: ",")
             
             if sizeArray.count == 2 {
                 if let width = Double(sizeArray[0]),
@@ -44,7 +74,7 @@ class PortalType: NSObject {
                 return
             }
             
-            backColor = colorWithHex(hex: background)
+            backColor = UIColor.colorWithHex(hex: background)
         }
     }
     
@@ -87,56 +117,4 @@ class PortalType: NSObject {
     
     /// レマーク
     var remark: String?
-    
-    /// setup color with rgb
-    ///
-    /// - Parameters:
-    ///   - red: red uint32
-    ///   - green: green uint32
-    ///   - blue: blue uint32
-    /// - Returns: UIColor
-    func colorWithRGB(red: UInt32, green: UInt32, blue: UInt32) -> UIColor {
-        return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1)
-    }
-    
-    /// setup color with hex
-    ///
-    /// - Parameter hex: hex color
-    /// - Returns: UIColor
-    func colorWithHex(hex: String) -> UIColor {
-        
-        // define rgb
-        var red: UInt32 = 0
-        var green: UInt32 = 0
-        var blue: UInt32 = 0
-        
-        // convert hex to red/green/blue
-        Scanner(string: hex[0..<2]).scanHexInt32(&red)
-        Scanner(string: hex[2..<4]).scanHexInt32(&green)
-        Scanner(string: hex[4..<6]).scanHexInt32(&blue)
-        
-        return self.colorWithRGB(red: red, green: green, blue: blue)
-    }
-    
-    /// model description for Testing
-    override var description: String {
-        return String(format: "size:%@, background:%@, imageURL: %@, link:%@, sort:%@,title:%@, subTitle:%@, remark:%@", size ?? "", background ?? "", imageURL ?? "", link ?? "", sort ?? "", title, subTitle ?? "", remark ?? "")
-    }
-    
-}
-
-// MARK: - String+Extension
-extension String{
-    
-    /// get subscript by range
-    ///
-    /// - Parameter r: range (0.0..<5.0)
-    subscript (r: Range<Int>) -> String {
-        get {
-            let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
-            let endIndex = self.index(self.startIndex, offsetBy: r.upperBound)
-            
-            return self[startIndex..<endIndex]
-        }
-    }
 }

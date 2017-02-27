@@ -21,50 +21,29 @@ class PortalTypeManager {
     /// ポータルタイプのロード
     func loadPortalType() {
         
-        // JSON URLの取得
-        let jsonURL = Bundle.main.url(forResource: "PortalType.json", withExtension: nil)
-        
-        // データのロード
-        let data = NSData(contentsOf: jsonURL!)
+        // JSON URLの取得, データのロード
+        guard let jsonURL = Bundle.main.url(forResource: "PortalType.json", withExtension: nil),
+              let data = try? Data(contentsOf: jsonURL) else {
+            return
+        }
         
         //　データのロード/反序列化
-        guard let array = try? JSONSerialization.jsonObject(with: data as! Data, options: []) as? [[String: AnyObject]] else {
+        guard let array = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: String]] else {
             return
         }
         
         //　辞書タイプからモデルに変換する
-        for item in array! {
-            let portalType: PortalType = PortalType.objectWithKeyValue(keyValue: (item as NSDictionary)) as! PortalType
-            print(portalType)
+        for item in array ?? [[String: String]]() {
+            
+            // ボータルタイプの初期化
+            let portalType = PortalType()
+            
+            // ボータルタイプの値の設置
+            portalType.setValues(dict: item)
+            
+            //　ボータルタイプを配列集合に追加
             portalTypes.append(portalType)
         }
         
-    }
-}
-
-// MARK: - NSObject+Extension
-extension NSObject {
-    /// 辞書タイプからモデルまでに変換する
-    ///
-    /// - Parameter keyValue: keyValue diction [String: AnyObject]
-    /// - Returns: PortalType Model
-    class func objectWithKeyValue(keyValue: NSDictionary) -> AnyObject {
-        let model = self.init()
-        var keyValueCount: UInt32 = 0
-        let properties = class_copyPropertyList(self.classForCoder(), &keyValueCount)
-
-        for i in 0..<Int(keyValueCount) {
-            let property = properties?[i]
-            guard let key = NSString(cString: property_getName(property), encoding: String.Encoding.utf8.rawValue) else {
-                continue
-            }
-            if let value = keyValue[key] {
-                model.setValue(value, forKey: key as String)
-            }
-        }
-        
-        free(properties)
-        
-        return model
     }
 }

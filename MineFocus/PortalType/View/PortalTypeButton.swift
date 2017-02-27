@@ -36,44 +36,44 @@ class PortalTypeButton: UIControl {
         
         // ボタンのインスタンス化
         let nib = UINib(nibName: "PortalTypeButton", bundle: nil)
-        let btn = nib.instantiate(withOwner: nil, options: nil)[0] as! PortalTypeButton
+        let btn = nib.instantiate(withOwner: nil, options: nil)[0] as? PortalTypeButton
 
         // ボタンサイズの設定
-        btn.bounds.size = portalType.buttonSize
+        btn?.bounds.size = portalType.buttonSize
         
         // 背景写真/背景色の設定
         if let backgroundImage = portalType.backgroundImage,
            let image = UIImage(named: backgroundImage) {
             
-            btn.backgroundColor = UIColor(patternImage: image)
+            btn?.backgroundColor = UIColor(patternImage: image)
         }else if let color = portalType.backColor{
             
-            btn.backgroundColor = color
+            btn?.backgroundColor = color
         }
         
         // ボタンの写真
         if let image = portalType.image {
-            btn.imageView.image = image
+            btn?.imageView.image = image
         }
         
         // ボタンのリンク
-        btn.link = portalType.link
+        btn?.link = portalType.link
         
         // ソートのタグ
         if let tag = portalType.buttonSort {
-            btn.sortTag = tag
+            btn?.sortTag = tag
         }
         
         //　ボタンのタイトル
-        btn.buttonTitle.text = portalType.title
+        btn?.buttonTitle.text = portalType.title
         
         //　ボタンのサブタイトル
-        btn.buttonSubTitle.text = portalType.subTitle ?? ""
+        btn?.buttonSubTitle.text = portalType.subTitle ?? ""
         
         // レマーク
-        btn.remark = portalType.remark ?? ""
+        btn?.remark = portalType.remark ?? ""
 
-        return btn
+        return btn ?? PortalTypeButton()
     }
     
 }
